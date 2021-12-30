@@ -37,7 +37,6 @@ func TestEmptyCategory(t *testing.T) {
 	}
 }
 
-
 func TestEmptyBookList(t *testing.T) {
 	grouped := StockList([]string{}, []string{"B", "A", "E"})
 	if grouped != "" {

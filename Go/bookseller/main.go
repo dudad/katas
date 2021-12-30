@@ -18,7 +18,7 @@ func categoryMapToString(categoryMap map[string]int, listCat []string) string {
 	return buffer.String()[3:]
 }
 
-func pareBookString(book string) (string, int) {
+func parseBookString(book string) (string, int) {
 	items := strings.Fields(book)
 	name := items[0]
 	valStr := items[1]
@@ -30,7 +30,7 @@ func pareBookString(book string) (string, int) {
 func buildCategoryMap(listArt []string) map[string]int {
 	categoryMap := make(map[string]int)
 	for _, book := range listArt {
-		category, val := pareBookString(book)
+		category, val := parseBookString(book)
 		categoryMap[category] += val
 	}
 	return categoryMap
