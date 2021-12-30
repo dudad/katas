@@ -25,3 +25,9 @@ func TestFour(t *testing.T) {
 		t.Error()
 	}
 }
+
+func Test1666(t *testing.T) {
+	if Decode("MDCLXVI") != 1666 {
+		t.Error()
+	}
+}
