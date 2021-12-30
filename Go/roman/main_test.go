@@ -7,3 +7,9 @@ func TestOne(t *testing.T) {
 		t.Error()
 	}
 }
+
+func TestFive(t *testing.T) {
+	if Decode("V") != 5 {
+		t.Error()
+	}
+}
