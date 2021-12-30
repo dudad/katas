@@ -12,16 +12,17 @@ func decodeDigit(char rune) int {
 
 func Decode(roman string) int {
 	sum := 0
+	prev := 1000000
 	for _, char := range roman {
 		val := decodeDigit(char)
+		if prev < val {
+			sum -= 2 * prev
+		}
 		sum += val
+		prev = val
 	}
 	if roman == "I" {
 		return 1
 	}
 	return sum
 }
-
-// func main() {
-// 	Decode("II")
-// }
