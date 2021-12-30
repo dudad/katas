@@ -13,3 +13,9 @@ func TestFive(t *testing.T) {
 		t.Error()
 	}
 }
+
+func TestTwo(t *testing.T) {
+	if Decode("II") != 2 {
+		t.Error()
+	}
+}
