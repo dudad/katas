@@ -1,5 +1,7 @@
 package repeater
 
+import "strings"
+
 func Repeater(s string, n int) string {
-	return s
+	return strings.Repeat(s, n)
 }
