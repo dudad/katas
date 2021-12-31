@@ -11,3 +11,10 @@ func TestSingleNumber(t *testing.T) {
 		t.Error()
 	}
 }
+
+func TestMultipleNumbers(t *testing.T) {
+	result := HighAndLow("1 2")
+	if result != "2 1" {
+		t.Error("Returned:", result)
+	}
+}
