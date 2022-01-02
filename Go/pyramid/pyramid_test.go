@@ -12,5 +12,7 @@ var _ = Describe("Pyramid", func() {
 			Expect(Pyramid(in)).To(Equal(out))
 		},
 		Entry("Empty", 0, [][]int{}),
+		Entry("signle", 1, [][]int{{1}, }),
+		Entry("multiply", 3, [][]int{{1}, {1,1}, {1,1,1} }),
 	)
 })
