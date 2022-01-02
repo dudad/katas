@@ -14,5 +14,7 @@ var _ = Describe("Anagram", func() {
 		},
 		Entry("Empty", "wow", []string{}, nil),
 		Entry("All are anagrams", "wow", []string{"oww", "wwo"}, []string{"oww", "wwo"}),
+		Entry("Part of provided are anagrams", "abba", []string{"aabb", "abcd", "bbaa", "dada"}, []string{"aabb", "bbaa"}),
+		Entry("No anagrams", "laser", []string{"lazing", "lazy", "lacer"}, nil),
 	)
 })
