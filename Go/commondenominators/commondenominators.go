@@ -27,6 +27,9 @@ func ConvertFracts(a [][]int) string {
 
 	lcm := 1
 	for _, pair := range a {
+		gcd := GCD(pair[0], pair[1])
+		pair[0] /= gcd
+		pair[1] /= gcd
 		lcm = LCM(lcm, pair[1])
 	}
 	var buffer bytes.Buffer

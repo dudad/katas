@@ -15,6 +15,7 @@ var _ = Describe("Commondenominators", func() {
 		Entry("Empty", [][]int{}, ""),
 		Entry("single", [][]int{{1, 2}}, "(1,2)"),
 		Entry("multi", [][]int{{1, 2}, {1, 3}, {1, 4}}, "(6,12)(4,12)(3,12)"),
+		Entry("multi - with shortennings", [][]int{{69, 130}, {87, 1310}, {30, 40}}, "(18078,34060)(2262,34060)(25545,34060)"),
 	)
 })
 
